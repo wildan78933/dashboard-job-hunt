@@ -1,4 +1,7 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import React, { FC } from "react";
 import {
   LuHome,
@@ -12,6 +15,7 @@ import {
 interface SidebarProps {}
 
 const Sidebar: FC<SidebarProps> = ({}) => {
+  const router = useRouter();
   return (
     <div className="pb-12 min-h-screen">
       <div className="space-y-4 py-4">
@@ -19,6 +23,7 @@ const Sidebar: FC<SidebarProps> = ({}) => {
           <h2 className="mb-2 px-4 text-lg font-semibold">Dashboard</h2>
           <div className="space-y-3">
             <Button
+              onClick={() => router.push("/")}
               variant={"ghost"}
               className="w-full justify-start rounded hover:text-primary"
             >
@@ -47,6 +52,7 @@ const Sidebar: FC<SidebarProps> = ({}) => {
               All Applications
             </Button>
             <Button
+              onClick={() => router.push("/job-listings")}
               variant={"ghost"}
               className="w-full justify-start rounded hover:text-primary"
             >
@@ -66,6 +72,7 @@ const Sidebar: FC<SidebarProps> = ({}) => {
           <div className="px-3 py-2">
             <div className="mb-2 px-4 text-lg font-semibold">Settings</div>
             <Button
+              onClick={() => router.push("/settings")}
               variant={"ghost"}
               className="w-full justify-start rounded hover:text-primary"
             >

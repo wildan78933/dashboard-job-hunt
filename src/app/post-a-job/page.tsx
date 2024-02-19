@@ -67,7 +67,9 @@ const PostJob: FC<PostJobProps> = ({}) => {
           List out your top perks and benefits
         </div>
       </div>
+
       <Separator />
+
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -209,7 +211,11 @@ const PostJob: FC<PostJobProps> = ({}) => {
             title="Required Skills"
             subtitle="Add required skill for the job"
           >
-            <InputSkills form={form}></InputSkills>
+            <InputSkills
+              form={form}
+              label="Add Skills"
+              name="requiredSkills"
+            ></InputSkills>
           </FieldInput>
 
           <FieldInput

@@ -4,11 +4,16 @@ import React, { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = ({}) => {
   const router = useRouter();
+
+  const { data: session } = useSession();
+
+  // console.log(session);
 
   const navCreateJobPage = () => router.push("/post-a-job");
 
@@ -16,7 +21,7 @@ const Header: FC<HeaderProps> = ({}) => {
     <div className="pb-3 mb-8 border-b border-border flex flex-row items-center justify-between">
       <div>
         <div>Company</div>
-        <div className="font-semibold">Twitter</div>
+        <div className="font-semibold">{session?.user.name}</div>
       </div>
       <div>
         <Button onClick={navCreateJobPage} className="rounded-noe py-3 px-6">

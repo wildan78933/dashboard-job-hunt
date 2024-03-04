@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React, { FC } from "react";
 import {
   Table,
@@ -13,8 +13,8 @@ import { JOB_LISTINGS_COLUMNS, JOB_LISTINGS_DATA } from "@/constans";
 import { Badge } from "@/components/ui/badge";
 import ButtonActionTable from "@/components/organisms/ButtonActionTable";
 import prisma from "../../../../lib/prisma";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { Job } from "@prisma/client";
 import { dateFormat } from "@/lib/utils";
 import moment from "moment";
@@ -72,7 +72,7 @@ const JobListingsPage: FC<JobListingsPageProps> = async ({}) => {
                   {item.applicants} / {item.needs}
                 </TableCell>
                 <TableCell>
-                  <ButtonActionTable url="/job-detail/1" />
+                  <ButtonActionTable url={`/job-detail/${item.id}`} />
                 </TableCell>
               </TableRow>
             ))}

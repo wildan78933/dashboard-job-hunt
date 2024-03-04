@@ -22,7 +22,7 @@ export const JOB_LISTINGS_COLUMNS: string[] = [
   "Needs",
 ];
 
-export const JOB_APPLICANT_COLUMNS: string[] = ["Name", "Applied Date"];
+export const JOB_APPLICANT_COLUMNS: string[] = ["Name"];
 
 export const JOB_APPLICANT_DATA = [
   {
@@ -84,3 +84,54 @@ export const EMPLOYEE_OPTIONS: optionType[] = [
     label: "1001-above",
   },
 ];
+
+// export const SELECT_INDUSTRY_COMPANY: optionType[] = [
+//   {
+//     id: "Advertising",
+//     label: "Advertising",
+//   },
+//   {
+//     id: "Business Service",
+//     label: "Business Service",
+//   },
+//   {
+//     id: "Blockchain",
+//     label: "Blockchain",
+//   },
+//   {
+//     id: "Cloud",
+//     label: "Cloud",
+//   },
+//   {
+//     id: "Consumer Tech",
+//     label: "Consumer Tech",
+//   },
+//   {
+//     id: "Education",
+//     label: "Education",
+//   },
+//   {
+//     id: "Fintech",
+//     label: "Fintech",
+//   },
+//   {
+//     id: "Gaming",
+//     label: "Gaming",
+//   },
+//   {
+//     id: "Food & Beverage",
+//     label: "Food & Beverage",
+//   },
+//   {
+//     id: "Healthcare",
+//     label: "Healthcare",
+//   },
+//   {
+//     id: "Hosting",
+//     label: "Hosting",
+//   },
+//   {
+//     id: "Media",
+//     label: "Media",
+//   },
+// ];
